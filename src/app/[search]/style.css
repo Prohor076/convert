@@ -1,0 +1,121 @@
+.main {
+    width: 100%;
+}
+
+.main__items {
+    background-color: rgba(255, 255, 255, .03);
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 8px;
+}
+
+.main__items-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 25px;
+}
+
+.main__items-field-input {
+    width: 100%;
+}
+
+.main__items-field input {
+    width: 100%;
+    padding: 35px;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: var(--font-montserrat);
+    color: rgba(255, 255, 255, 1);
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.main__items-field input::placeholder {
+    color: rgba(255, 255, 255, .85);
+    font-family: var(--font-montserrat);
+}
+
+.main__items-field-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 110px;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--span-color);
+    user-select: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.main__items-field-button:hover {
+    opacity: .85;
+}
+
+.main__items-field-button:active {
+    opacity: .65;
+}
+
+.main__items-body {
+    display: grid;
+    grid-template-rows: 0fr;
+    border-top: 1px solid transparent;
+    transition: .15s;
+}
+
+.main__items-body.active {
+    grid-template-rows: 1fr;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+}
+
+.main__items-body.active .main__items-body-items {
+    padding: 35px;
+}
+
+.main__items-body:not(.active) .main__items-body-items {
+    padding: 0;
+}
+
+.main__items-body-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.main__items-body-items-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.main__items-body-items-item-text {
+    color: rgba(255, 255, 255, .85);
+}
+
+.main__items-body-items-item-value {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.main__items-body-items-item-value svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    opacity: .15;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.main__items-body-items-item-value svg:hover {
+    opacity: 1;
+}
